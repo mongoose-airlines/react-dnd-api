@@ -7,6 +7,7 @@ import ClassDetails from '../ClassDetails/ClassDetails'
 import MonsterList from '../MonsterList/MonsterList'
 import MonsterDetails from '../MonsterDetails/MonsterDetails'
 import SpellSearch from '../SpellSearch/SpellSearch'
+import SpellDetails from '../SpellDetails/SpellDetails'
 
 function App() {
   return (
@@ -22,13 +23,20 @@ function App() {
         location={location}
       />
     }/>
+    <Route exact path='/spell/:name' render={({ location, match }) => 
+      <SpellDetails 
+        location={location}
+        match={match}
+      />
+    }/>
     <Route exact path='/class/:name' render={({ location }) => 
       <ClassDetails 
         location={location}
       />
     }/>
     <Route exact path='/spellsearch' render={() =>
-      <SpellSearch />
+      <SpellSearch 
+      />
     }/>
     <div className="App">
       <header className="App-header">

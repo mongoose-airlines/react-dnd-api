@@ -1,24 +1,33 @@
+const baseUrl = "https://www.dnd5eapi.co/api"
+
 export function getClassList() {
-  return fetch('https://www.dnd5eapi.co/api/classes')
+  return fetch(`${baseUrl}/classes`)
   .then(res => res.json())
 }
 
 export function getClassDetails(classTitle){
-  return fetch(`https://www.dnd5eapi.co/api/classes/${classTitle}`)
+  return fetch(`${baseUrl}/classes/${classTitle}`)
   .then(res => res.json())
 }
 
 export function getMonsterList() {
-  return fetch('https://www.dnd5eapi.co/api/monsters')
+  return fetch(`${baseUrl}/monsters`)
   .then(res => res.json())
 }
 
 export function getMonsterDetails(monsterTitle) {
-  return fetch(`https://www.dnd5eapi.co/api/monsters/${monsterTitle}`)
+  return fetch(`${baseUrl}/monsters/${monsterTitle}`)
   .then(res => res.json())
 }
 
 export function spellSearch(formData) {
-  return fetch(`https://www.dnd5eapi.co/api/spells/?name=${formData.query}`)
+  return fetch(`${baseUrl}/spells/?name=${formData.query}`)
   .then(res => res.json())
 }
+
+export function getSpellDetails(spellName) {
+  return fetch(`${baseUrl}/spells/${spellName}`)
+  .then(res => res.json())
+}
+
+
