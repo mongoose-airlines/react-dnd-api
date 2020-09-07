@@ -19,14 +19,14 @@ class ClassList extends Component {
 
     //** each result has index, name, and url classTitle.url I think that you're right, keep going sorry lol
   } // Now we need to add these links to our App.js Route.
-  // Lemme push rq
+
   render() {
     return(
       <>
         <h1>DERP, I'M THE CLASS DATA COMPONENT</h1> 
         { this.state.results.map((classTitle) => 
           <Link
-            key={classTitle.name}
+            key={classTitle.index}
             to={{
               pathname: `/class/${classTitle.index}`,
               state: {classTitle}

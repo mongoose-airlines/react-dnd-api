@@ -5,12 +5,20 @@ import { Route } from 'react-router-dom'
 import './App.css';
 import * as API from '../../services/api-calls'
 import ClassList from '../ClassList/ClassList'
+import ClassDetails from '../ClassDetails/ClassDetails'
 
 function App() {
   return (
     <>
     <Route exact path='/classlist' render={() =>
       <ClassList />
+    }/>
+    <Route exact path='/class/:name' render={({history, location, match}) => 
+      <ClassDetails 
+        match={match}
+        history={history}
+        location={location}
+      />
     }/>
     <div className="App">
       <header className="App-header">
