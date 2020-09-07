@@ -1,3 +1,86 @@
+Stuff we need to do!
+
+
+- "component thought" -- More tuesday than wednesday? (This sounds like something Shahzad will touch on and we'll talk about during TTT) makes sense
+
+________________________________________________
+Tuesday POA:
+- I'ma start in the AM
+  - TTT
+- Shahzad gets the PM
+  - Closures
+  - Functional programming
+  - Intro to SPAs and React
+  - Intro to JSX
+  - React Floorplan Lab
+
+________________________________________________
+Wednesday POA:
+
+- built in vs. user-defined components (also more tuesday than wednesday?) 
+
+- A Word (just a small blurb) about hooks
+  - When we'll be talking about them
+  - Now is the time to focus on the old way.  New way will come in a day or two...
+- State
+  - What is state?
+  - Initializing State
+  - Updating State
+- Props
+  - What are props
+  - How to pass props
+- State vs. Props
+- Presentational(stateless) vs container components (stateful) 
+- Lifecycle methods (componentDidMount)
+  - discussion of the other ones (and how using hooks can avoid em)
+- React Router (history/location)
+  - react-router-dom
+- Async/Await
+- AJAX Calls
+  - Service modules
+
+
+
+________________________________________________
+Thursday POA:
+
+We have the handling input in react lesson (dev skills) scheduled for this day
+https://git.generalassemb.ly/SEI-CC/SEI-CC-7/blob/master/work/w10/d5/01-handling-input-in-react.md
+
+
+- Searching with spells works REALLY well.  (if you leave it blank, it returns everything)
+- Input in React again.  That's good, no?
+- Yeah I think this works... Really short day compared to Wednesday though
+- Event Handling
+  - Connecting handlers (methods) to events
+  - Passing Event handlers to Children components
+  - Context Binding
+
+NOTES FOR WHEN YOU GET BACK:
+👔👔👔👔👔👔👔👔👔👔👔👔👔
+- We still need a little more detail on the monsters page.
+- Once we get the search page done, we'll need to do MINIMAL styling
+- I'd REALLY love to have funny images for the classes, but that's a stretch.
+- I removed match and history from the render on App.js because we're not using them.
+- We should not be using 'import * as API from .....' if we're only importing one thing (I refactored this, but wanted to let you know)
+________________________________________________
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

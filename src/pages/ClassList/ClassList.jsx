@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import * as API from '../../services/api-calls'
+import { getClassList } from '../../services/api-calls'
 import { Link } from 'react-router-dom'
 
 
@@ -12,7 +12,7 @@ class ClassList extends Component {
     // This will be where we call the API via the services module
     // and then run setState to update state with the info returned 
     // from the API  (Leave these comments here for now, IMO)
-    const classData = await API.getClassList()
+    const classData = await getClassList()
     this.setState({ results: classData.results}) 
     console.log(this.state.results)
     // leave this one, just so we can access it

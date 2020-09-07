@@ -1,11 +1,12 @@
 import React from 'react';
 import logo from './logo.svg';
 import { Route } from 'react-router-dom'
-
 import './App.css';
-import * as API from '../../services/api-calls'
 import ClassList from '../ClassList/ClassList'
 import ClassDetails from '../ClassDetails/ClassDetails'
+import MonsterList from '../MonsterList/MonsterList'
+import MonsterDetails from '../MonsterDetails/MonsterDetails'
+import SpellSearch from '../SpellSearch/SpellSearch'
 
 function App() {
   return (
@@ -13,12 +14,21 @@ function App() {
     <Route exact path='/classlist' render={() =>
       <ClassList />
     }/>
-    <Route exact path='/class/:name' render={({history, location, match}) => 
-      <ClassDetails 
-        match={match}
-        history={history}
+    <Route exact path='/monsterlist' render={() =>
+      <MonsterList />
+    }/>
+    <Route exact path='/monster/:name' render={({ location }) => 
+      <MonsterDetails 
         location={location}
       />
+    }/>
+    <Route exact path='/class/:name' render={({ location }) => 
+      <ClassDetails 
+        location={location}
+      />
+    }/>
+    <Route exact path='/spellsearch' render={() =>
+      <SpellSearch />
     }/>
     <div className="App">
       <header className="App-header">
@@ -27,6 +37,8 @@ function App() {
           Edit <code>src/App.js</code> and save to reload. Wait does this work?
         </p>
         <a href="/classlist">Class List, Bitches</a>
+        <a href="/monsterlist">Scary Monsters HURR</a>
+        <a href="/spellSearch">Search for Spellz</a>
         <a
           className="App-link"
           href="https://reactjs.org"

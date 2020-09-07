@@ -1,28 +1,38 @@
 import React, { Component } from 'react';
-import * as API from '../../services/api-calls'
+import { getClassDetails } from '../../services/api-calls'
 
 class ClassDetails extends Component {
   state = { 
     classTitle : this.props.location.state.classTitle.index,
-    classDetails: ''
+    classDetails: {
+      name: "",
+      hit_die: "",
+      proficiencies: []
+    }
   }
   
   async componentDidMount(){
-    const classDetails = await API.getClassDetails(this.props.location.state.classTitle.index)
+    const classDetails = await getClassDetails(this.props.location.state.classTitle.index)
     console.log(classDetails)
-    this.setState({classDetails: classDetails.results})
+    this.setState({classDetails})
   }
 
+  
   render() {
+    const {classDetails} = this.state
     return (
-      <div>sup? class details go here have fun.</div>
+      <div>
+        <div>{classDetails.name}</div>
+        <div>Hit die: d{classDetails.hit_die}</div>
+        <div>Proficiencies:</div>
+        {classDetails.proficiencies.map((proficiency) =>
+          <div key={proficiency.index}>
+            {proficiency.name}
+          </div>
+        )}
+      </div>
     );
   }
 }
-
-// Always lol This is fun!!!
-
-// Hrm.  Yeah.  It IS returning the whole list
-// which implies that it's not getting the title
-//  I WAS JUT ABOUT TO TYPE THAT.  WHEEEEEE 
+ 
 export default ClassDetails;
