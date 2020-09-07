@@ -29,9 +29,7 @@ class SpellSearch extends Component {
           )}
         </>
         :
-        <>
         <h3>Please search for a spell!</h3>
-        </>
         }
       </>
     );

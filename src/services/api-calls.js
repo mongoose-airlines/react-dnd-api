@@ -30,4 +30,3 @@ export function getSpellDetails(spellName) {
   .then(res => res.json())
 }
 
-

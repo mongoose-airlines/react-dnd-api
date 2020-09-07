@@ -14,5 +14,5 @@ const SpellCard = (props) => {
     </>
    );
 }
- 
+
 export default SpellCard;
