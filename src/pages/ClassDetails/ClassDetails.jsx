@@ -1,17 +1,28 @@
 import React, { Component } from 'react';
+import * as API from '../../services/api-calls'
 
 class ClassDetails extends Component {
-  state = { classTitle : this.props.location.state.classTitle.name }
+  state = { 
+    classTitle : this.props.location.state.classTitle.index,
+    classDetails: ''
+  }
+  
+  async componentDidMount(){
+    const classDetails = await API.getClassDetails(this.props.location.state.classTitle.index)
+    console.log(classDetails)
+    this.setState({classDetails: classDetails.results})
+  }
+
   render() {
-    console.log(this.state.classTitle)
-    console.log(this.props)
     return (
       <div>sup? class details go here have fun.</div>
     );
   }
 }
-// is that state thing right? that's what we're passing to this, right?
-// I don't think I ever wrote anything that ugly is this just API bull?
-// I
-// OK.  Time for a PUSH
+
+// Always lol This is fun!!!
+
+// Hrm.  Yeah.  It IS returning the whole list
+// which implies that it's not getting the title
+//  I WAS JUT ABOUT TO TYPE THAT.  WHEEEEEE 
 export default ClassDetails;
