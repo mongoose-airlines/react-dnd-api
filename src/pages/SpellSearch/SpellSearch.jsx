@@ -18,19 +18,19 @@ class SpellSearch extends Component {
     return (
       <>
         <h3>Such Spellz</h3>
-        <SearchForm handleSpellSearch={this.handleSpellSearch} />
-        {this.state.spells.length ? 
-        <>
-          {this.state.spells.map(spell => 
-            <SpellCard
-              key={spell.index}
-              spell={spell}
-            />
-          )}
-        </>
-        :
-        <h3>Please search for a spell!</h3>
-        }
+          <SearchForm handleSpellSearch={this.handleSpellSearch} />
+          {this.state.spells.length ? 
+          <>
+            {this.state.spells.map(spell => 
+              <SpellCard
+                key={spell.index}
+                spell={spell}
+              />
+            )}
+          </>
+          :
+          <h3>Please search for a spell!</h3>
+          }
       </>
     );
   }

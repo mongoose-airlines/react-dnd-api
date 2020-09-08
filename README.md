@@ -56,13 +56,7 @@ https://git.generalassemb.ly/SEI-CC/SEI-CC-7/blob/master/work/w10/d5/01-handling
   - Passing Event handlers to Children components
   - Context Binding
 
-NOTES FOR WHEN YOU GET BACK:
-👔👔👔👔👔👔👔👔👔👔👔👔👔
-- We still need a little more detail on the monsters page.
-- Once we get the search page done, we'll need to do MINIMAL styling
-- I'd REALLY love to have funny images for the classes, but that's a stretch.
-- I removed match and history from the render on App.js because we're not using them.
-- We should not be using 'import * as API from .....' if we're only importing one thing (I refactored this, but wanted to let you know)
+
 ________________________________________________
 
 

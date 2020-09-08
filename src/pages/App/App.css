@@ -13,12 +13,23 @@
     animation: App-logo-spin infinite 10s linear;
   }
 }
+
+.icon-container {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: clamp(400px, 80vw, 1200px);
+  margin: auto;
+  justify-content: center;
+}
+
 #classDiv {
   border: 1px solid black;
   width: 125px;
   display: grid;
   justify-items: center;
   padding: 15px;
+  margin: 1rem;
 }
 
 .App-header {
