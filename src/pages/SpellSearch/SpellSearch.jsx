@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { spellSearch } from "../../services/api-calls";
-import SearchForm from "../SearchForm/SearchForm";
-import SpellCard from "../SpellCard/SpellCard"
+import SearchForm from "../../components/SearchForm/SearchForm";
+import SpellCard from "../../components/SpellCard/SpellCard"
 
 class SpellSearch extends Component {
   state = {
