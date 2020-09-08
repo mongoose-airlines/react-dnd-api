@@ -7,7 +7,7 @@ import MonsterList from '../MonsterList/MonsterList'
 import MonsterDetails from '../MonsterDetails/MonsterDetails'
 import SpellSearch from '../SpellSearch/SpellSearch'
 import SpellDetails from '../SpellDetails/SpellDetails'
-import NavBar from '../NavBar/NavBar'
+import NavBar from '../../components/NavBar/NavBar'
 
 function App() {
   return (
