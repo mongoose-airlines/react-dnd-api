@@ -11,7 +11,6 @@ class ClassDetails extends Component {
     const classDetails = await getClassDetails(
       this.props.location.state.classTitle.index
     );
-    console.log(classDetails);
     this.setState({ classDetails });
   }
 
@@ -21,9 +20,10 @@ class ClassDetails extends Component {
       <div>
         {classDetails.name ?
         <>
-          <div>{classDetails.name}</div>
+          <img src="http://theoldreader.com/kittens/320/240/" alt=""/>
+          <h2>{classDetails.name}</h2>
           <div>Hit die: d{classDetails.hit_die}</div>
-          <div>Proficiencies:</div>
+          <h3>Proficiencies:</h3>
           {classDetails.proficiencies.map((proficiency) => (
             <div key={proficiency.index}>{proficiency.name}</div>
           ))}

@@ -19,6 +19,7 @@ class ClassList extends Component {
       <>
         <h1>DERP, I'M THE CLASS DATA COMPONENT</h1>
         {this.state.results.map((classTitle) => (
+          <>
           <Link
             key={classTitle.index}
             to={{
@@ -27,7 +28,8 @@ class ClassList extends Component {
             }}
           >
             {classTitle.name}
-          </Link>
+          </Link><br></br>
+          </>
         ))}
       </>
     );

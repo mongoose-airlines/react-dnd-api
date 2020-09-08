@@ -18,7 +18,7 @@ class MonsterDetails extends Component {
     return (
       <>
         <h3>Monster Deets</h3>
-        <img src="http://theoldreader.com/kittens/640/480/" alt=""/>
+        <img src="http://theoldreader.com/kittens/320/240/" alt=""/>
         <h2>{monsterDetails.name}</h2>
         <h4>Size: {monsterDetails.size}</h4>
         <h4>Type: {monsterDetails.type}</h4>

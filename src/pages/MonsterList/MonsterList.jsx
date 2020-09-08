@@ -16,6 +16,7 @@ class MonsterList extends Component {
       <>
         <h3>Monster List (OMG SCARY)</h3>
         {this.state.monsterList.map((monster) => (
+          <>
           <Link
             key={monster.index}
             to={{
@@ -24,7 +25,8 @@ class MonsterList extends Component {
             }}
           >
             {monster.name}
-          </Link>
+          </Link><br></br>
+          </>
         ))}
       </>
     );
