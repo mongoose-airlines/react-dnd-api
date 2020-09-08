@@ -7,7 +7,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 
 ReactDOM.render(
   <Router>
-    <Route render={({history}) => <App history={history} />} />
+    <React.StrictMode>
+      <Route render={({history}) => <App history={history} />} />
+    </React.StrictMode>
   </Router>,
   document.getElementById('root')
 );
