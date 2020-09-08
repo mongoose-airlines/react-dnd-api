@@ -9,9 +9,9 @@ const NavBar = () => {
           className="App-logo"
           alt="logo"
         />
-        <a href="/classlist">Class List, Bitches</a>
-        <a href="/monsterlist">Scary Monsters HURR</a>
-        <a href="/spellSearch">Search for Spellz</a>
+        <a href="/classlist">Class List</a>
+        <a href="/monsterlist">Scary Monsters</a>
+        <a href="/spellSearch">Search for Spells</a>
       </header>
   );
 };

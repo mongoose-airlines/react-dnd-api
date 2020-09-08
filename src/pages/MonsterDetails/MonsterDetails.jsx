@@ -41,5 +41,4 @@ class MonsterDetails extends Component {
   }
 }
 
-
 export default MonsterDetails;

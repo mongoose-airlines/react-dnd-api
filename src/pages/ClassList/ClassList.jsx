@@ -17,7 +17,7 @@ class ClassList extends Component {
   render() {
     return (
       <>
-        <h1>DERP, I'M THE CLASS DATA COMPONENT</h1>
+        <h1>I'M THE CLASS DATA COMPONENT</h1>
         <div className="icon-container">
           {this.state.results.map((classTitle) => (
             <Link
