@@ -1,11 +1,10 @@
 import React from "react";
-import logo from '../App/logo.svg'
 
 const NavBar = () => {
   return (
       <header className="App-header">
         <img
-          src={logo}
+          src="/logo.svg"
           style={{ width: "100px", height: "100px" }}
           className="App-logo"
           alt="logo"
