@@ -10,8 +10,15 @@
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 3s linear;
+    animation: App-logo-spin infinite 10s linear;
   }
+}
+#classDiv {
+  border: 1px solid black;
+  width: 125px;
+  display: grid;
+  justify-items: center;
+  padding: 15px;
 }
 
 .App-header {

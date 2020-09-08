@@ -19,9 +19,9 @@ class ClassList extends Component {
       <>
         <h1>DERP, I'M THE CLASS DATA COMPONENT</h1>
         {this.state.results.map((classTitle) => (
-          <>
+          <div id="classDiv" key={classTitle.index}>
+          <img style={{ width: "100px", height: "100px" }} src={`/images/${classTitle.name}.svg`} alt=""/>
           <Link
-            key={classTitle.index}
             to={{
               pathname: `/class/${classTitle.index}`,
               state: { classTitle },
@@ -29,7 +29,7 @@ class ClassList extends Component {
           >
             {classTitle.name}
           </Link><br></br>
-          </>
+          </div>
         ))}
       </>
     );
