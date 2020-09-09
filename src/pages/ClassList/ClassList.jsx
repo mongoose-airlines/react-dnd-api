@@ -20,18 +20,19 @@ class ClassList extends Component {
         <h1>I'M THE CLASS DATA COMPONENT</h1>
         <div className="icon-container">
           {this.state.results.map((classTitle) => (
-            <Link
-            to={{
-              pathname: `/class/${classTitle.index}`,
-              state: { classTitle },
-            }}
-          >
-            <div id="classDiv" key={classTitle.index}>
-              <img style={{ width: "100px", height: "100px" }} src={`/images/${classTitle.name}.svg`} alt=""/>
-              
-                {classTitle.name}
+            <div key={ classTitle.index }>
+              <Link
+                to={{
+                  pathname: `/class`,
+                  state: { classTitle },
+                }}
+              >
+                <div id="classDiv">
+                  <img style={{ width: "100px", height: "100px" }} src={`/images/${classTitle.name}.svg`} alt=""/>
+                    {classTitle.name}
+                </div>
+              </Link>
             </div>
-            </Link>
           ))}
         </div>
       </>

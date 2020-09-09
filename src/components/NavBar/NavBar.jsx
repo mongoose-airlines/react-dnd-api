@@ -1,6 +1,7 @@
 import React from "react";
 
-const NavBar = () => {
+const NavBar = (props) => {
+  console.log(props)
   return (
       <header className="App-header">
         <img
@@ -9,9 +10,9 @@ const NavBar = () => {
           className="App-logo"
           alt="logo"
         />
-        <a href="/classlist">Class List</a>
-        <a href="/monsterlist">Scary Monsters</a>
-        <a href="/spellSearch">Search for Spells</a>
+        {props.navItems.map((navItem, idx) =>
+          <a key={idx} href={navItem.url}>{navItem.name}</a>
+        )}
       </header>
   );
 };

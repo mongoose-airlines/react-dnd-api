@@ -1,16 +1,14 @@
 import React, { Component } from "react";
-import { getClassDetails } from "../../services/api-calls";
+import { getDetails } from "../../services/api-calls";
 
 class ClassDetails extends Component {
   state = {
-    classTitle: this.props.location.state.classTitle.index,
+    url: this.props.location.state.classTitle.url,
     classDetails: {},
   };
 
   async componentDidMount() {
-    const classDetails = await getClassDetails(
-      this.props.location.state.classTitle.index
-    );
+    const classDetails = await getDetails(this.state.url);
     this.setState({ classDetails });
   }
 

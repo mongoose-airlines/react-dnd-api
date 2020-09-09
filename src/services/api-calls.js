@@ -1,32 +1,27 @@
-const baseUrl = "https://www.dnd5eapi.co/api"
+const baseUrl = "https://www.dnd5eapi.co"
 
 export function getClassList() {
-  return fetch(`${baseUrl}/classes`)
-  .then(res => res.json())
-}
-
-export function getClassDetails(classTitle){
-  return fetch(`${baseUrl}/classes/${classTitle}`)
+  return fetch(`${baseUrl}/api/classes`)
   .then(res => res.json())
 }
 
 export function getMonsterList() {
-  return fetch(`${baseUrl}/monsters`)
+  return fetch(`${baseUrl}/api/monsters`)
   .then(res => res.json())
 }
 
-export function getMonsterDetails(monsterTitle) {
-  return fetch(`${baseUrl}/monsters/${monsterTitle}`)
+export function getDetails(apiUrl) {
+  return fetch(`${baseUrl}${apiUrl}`)
   .then(res => res.json())
 }
 
 export function spellSearch(formData) {
-  return fetch(`${baseUrl}/spells/?name=${formData.query}`)
+  return fetch(`${baseUrl}/api/spells/?name=${formData.query}`)
   .then(res => res.json())
 }
 
 export function getSpellDetails(spellName) {
-  return fetch(`${baseUrl}/spells/${spellName}`)
+  return fetch(`${baseUrl}/api/spells/${spellName}`)
   .then(res => res.json())
 }
 

@@ -20,7 +20,7 @@ class MonsterList extends Component {
           <Link
             key={monster.index}
             to={{
-              pathname: `monster/${monster.index}`,
+              pathname: `/monster`,
               state: { monster },
             }}
           >
